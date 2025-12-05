@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var activities = ["Archery", "Baseball", "Basketball", "Bowling", "Boxing", "Cricket", "Curling", "Fencing", "Golf", "Hiking", "Lacrosse", "Rugby", "Squash"]
     
-    var selectedActivity = "Baseball" // hardcoded default
+    @State var selectedActivity = "Archery" // hardcoded default
     
     
     var body: some View {
@@ -33,7 +33,7 @@ struct ContentView: View {
             }
             
             Button("New Activity") {
-                // change activity
+                selectedActivity = activities.randomElement() ?? "Archery"
             }
             .buttonStyle(.borderedProminent)
         }
