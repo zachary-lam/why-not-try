@@ -20,6 +20,8 @@ struct ContentView: View {
             Text("Why not try...")
                 .font(.largeTitle.bold())
             
+            Spacer()
+            
             VStack {
                 Circle()
                     .fill(colors.randomElement() ?? .blue)
@@ -33,6 +35,8 @@ struct ContentView: View {
                 Text(selectedActivity)
                     .font(.title)
             }
+            
+            Spacer()
             
             Button("New Activity") {
                 selectedActivity = activities.randomElement() ?? "Archery"
