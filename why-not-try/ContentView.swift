@@ -12,6 +12,11 @@ struct ContentView: View {
         Circle()
             .fill(.blue)
             .padding()
+            .overlay(
+                Image(systemName: "figure.archery")
+                    .font(.system(size: 144))
+                    .foregroundStyle(.white)
+            )
     }
 }
 
