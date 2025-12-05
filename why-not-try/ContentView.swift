@@ -9,14 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Circle()
-            .fill(.blue)
-            .padding()
-            .overlay(
-                Image(systemName: "figure.archery")
-                    .font(.system(size: 144))
-                    .foregroundStyle(.white)
-            )
+        VStack{
+            Circle()
+                .fill(.blue)
+                .padding()
+                .overlay(
+                    Image(systemName: "figure.archery")
+                        .font(.system(size: 144))
+                        .foregroundStyle(.white)
+                )
+            
+            Text("Archery")
+                .font(.title)
+        }
     }
 }
 
