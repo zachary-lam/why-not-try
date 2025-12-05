@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var activities = ["Archery", "Baseball", "Basketball", "Bowling", "Boxing", "Cricket", "Curling", "Fencing", "Golf", "Hiking", "Lacrosse", "Rugby", "Squash"]
     
-    var selectedActivity = "Archery" // hardcoded default
+    var selectedActivity = "Baseball" // hardcoded default
     
     
     var body: some View {
@@ -31,6 +31,11 @@ struct ContentView: View {
                 Text(selectedActivity)
                     .font(.title)
             }
+            
+            Button("New Activity") {
+                // change activity
+            }
+            .buttonStyle(.borderedProminent)
         }
     }
 }
