@@ -10,17 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack{
-            Circle()
-                .fill(.blue)
-                .padding()
-                .overlay(
-                    Image(systemName: "figure.archery")
-                        .font(.system(size: 144))
-                        .foregroundStyle(.white)
-                )
+            Text("Why not try...")
+                .font(.largeTitle.bold())
             
-            Text("Archery")
-                .font(.title)
+            VStack {
+                Circle()
+                    .fill(.blue)
+                    .padding()
+                    .overlay(
+                        Image(systemName: "figure.archery")
+                            .font(.system(size: 144))
+                            .foregroundStyle(.white)
+                    )
+                
+                Text("Archery")
+                    .font(.title)
+            }
         }
     }
 }
