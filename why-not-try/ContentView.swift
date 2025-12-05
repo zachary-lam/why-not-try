@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    var activities = ["Archery", "Baseball", "Basketball", "Bowling", "Boxing", "Cricket", "Curling", "Fencing", "Golf", "Hiking", "Lacrosse", "Rugby", "Squash"]
+    
+    var selectedActivity = "Archery" // hardcoded default
+    
+    
     var body: some View {
         VStack{
             Text("Why not try...")
@@ -18,12 +23,12 @@ struct ContentView: View {
                     .fill(.blue)
                     .padding()
                     .overlay(
-                        Image(systemName: "figure.archery")
+                        Image(systemName: "figure.\(selectedActivity.lowercased())")
                             .font(.system(size: 144))
                             .foregroundStyle(.white)
                     )
                 
-                Text("Archery")
+                Text(selectedActivity)
                     .font(.title)
             }
         }
